@@ -11,3 +11,9 @@ func NewListNode(val int, next *ListNode) *ListNode {
 		Next: next,
 	}
 }
+
+type TreeNode struct {
+	Val   int
+	Left  *TreeNode
+	Right *TreeNode
+}
