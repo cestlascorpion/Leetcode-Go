@@ -3,7 +3,7 @@ package solution
 import "testing"
 
 func TestParkingSystem_AddCar(t *testing.T) {
-	p := Constructor(1, 1, 0)
+	p := ConstructorParkingSystem(1, 1, 0)
 	if !p.AddCar(1) {
 		t.Fail()
 	}

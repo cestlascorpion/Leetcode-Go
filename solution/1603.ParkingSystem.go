@@ -10,7 +10,7 @@ type ParkingSystem struct {
 	cap [3]int
 }
 
-func Constructor(big int, medium int, small int) ParkingSystem {
+func ConstructorParkingSystem(big int, medium int, small int) ParkingSystem {
 	p := ParkingSystem{
 		cap: [3]int{big, medium, small},
 	}
