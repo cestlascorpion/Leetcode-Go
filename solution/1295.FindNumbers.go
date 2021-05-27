@@ -1,6 +1,6 @@
 package solution
 
-func helper(num int) int {
+func findingsHelper(num int) int {
 	res := 1
 	for num > 9 {
 		res++
@@ -12,7 +12,7 @@ func helper(num int) int {
 func FindNumbers(nums []int) int {
 	res := 0
 	for _, num := range nums {
-		if (helper(num) & 1) == 0 {
+		if (findingsHelper(num) & 1) == 0 {
 			res++
 		}
 	}

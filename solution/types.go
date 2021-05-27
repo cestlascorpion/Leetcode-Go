@@ -17,3 +17,28 @@ type TreeNode struct {
 	Left  *TreeNode
 	Right *TreeNode
 }
+
+func IsSameString(s1, s2 string) bool {
+	if len(s1) != len(s2) {
+		return false
+	}
+	for i := range s1 {
+		if s1[i] != s2[i] {
+			return false
+		}
+	}
+	return true
+}
+
+func IsSameArray(arr1, arr2 []int) bool {
+	if len(arr1) != len(arr2) {
+		return false
+	}
+	for i := range arr1 {
+		if arr1[i] != arr2[i] {
+			return false
+		}
+	}
+	return true
+}
+
