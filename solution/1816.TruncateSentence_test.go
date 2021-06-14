@@ -7,13 +7,8 @@ func TestTruncateSentence(t *testing.T) {
 	k := 4
 	exp := "Hello how are you"
 	res := TruncateSentence(s, k)
-	if len(exp) != len(res) {
+	if !IsSameString(exp, res) {
 		t.Fail()
-	}
-	for i := range exp {
-		if exp[i] != res[i] {
-			t.Fail()
-		}
 	}
 }
 
@@ -22,13 +17,8 @@ func TestTruncateSentence2(t *testing.T) {
 	k := 4
 	exp := "Hello how are you"
 	res := TruncateSentence(s, k)
-	if len(exp) != len(res) {
+	if !IsSameString(exp, res) {
 		t.Fail()
-	}
-	for i := range exp {
-		if exp[i] != res[i] {
-			t.Fail()
-		}
 	}
 }
 
@@ -37,12 +27,7 @@ func TestTruncateSentence3(t *testing.T) {
 	k := 1
 	exp := "Hello"
 	res := TruncateSentence(s, k)
-	if len(exp) != len(res) {
+	if !IsSameString(exp, res) {
 		t.Fail()
-	}
-	for i := range exp {
-		if exp[i] != res[i] {
-			t.Fail()
-		}
 	}
 }

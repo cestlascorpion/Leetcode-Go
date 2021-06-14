@@ -7,12 +7,7 @@ func TestDecode(t *testing.T) {
 	first := 1
 	res := Decode(encoded, first)
 	exp := []int{1, 0, 2, 1}
-	if len(res) != len(exp) {
+	if !IsSameArray(exp, res) {
 		t.Fail()
-	}
-	for i, v := range exp {
-		if res[i] != v {
-			t.Fail()
-		}
 	}
 }

@@ -7,12 +7,7 @@ func TestSumEvenAfterQueries(t *testing.T) {
 	queries := [][]int{{1, 0}, {-3, 1}, {-4, 0}, {2, 3}}
 	exp := []int{8, 6, 2, 4}
 	res := SumEvenAfterQueries(nums, queries)
-	if len(res) != len(exp) {
+	if !IsSameArray(exp, res) {
 		t.Fail()
-	}
-	for i := range res {
-		if res[i] != exp[i] {
-			t.Fail()
-		}
 	}
 }

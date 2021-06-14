@@ -7,12 +7,7 @@ func TestKidsWithCandies(t *testing.T) {
 	extra := 3
 	res := KidsWithCandies(candies, extra)
 	exp := []bool{true, true, true, false, true}
-	if len(res) != len(exp) {
+	if !IsSameBoolArray(exp, res) {
 		t.Fail()
-	}
-	for i, v := range exp {
-		if res[i] != v {
-			t.Fail()
-		}
 	}
 }

@@ -39,3 +39,26 @@ func LDR2(node *TreeNode) {
 	}()
 	wg.Wait()
 }
+
+func FromTopToBottom(root *TreeNode) [][]*TreeNode {
+	res := make([][]*TreeNode, 0)
+	if root == nil {
+		return res
+	}
+	level := make([]*TreeNode, 0, 1)
+	level = append(level, root)
+	for len(level) != 0 {
+		nextLevel := make([]*TreeNode, 0, len(level)*2)
+		for i := range level {
+			if level[i].Left != nil {
+				nextLevel = append(nextLevel, level[i].Left)
+			}
+			if level[i].Right != nil {
+				nextLevel = append(nextLevel, level[i].Right)
+			}
+		}
+		res = append(res, level)
+		level = nextLevel
+	}
+	return res
+}

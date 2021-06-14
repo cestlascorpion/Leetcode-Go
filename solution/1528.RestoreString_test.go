@@ -7,12 +7,7 @@ func TestRestoreString(t *testing.T) {
 	indices := []int{4, 5, 6, 7, 0, 2, 1, 3}
 	exp := "leetcode"
 	res := RestoreString(s, indices)
-	if len(res) != len(exp) {
+	if !IsSameString(exp, res) {
 		t.Fail()
-	}
-	for i, v := range exp {
-		if res[i] != uint8(v) {
-			t.Fail()
-		}
 	}
 }

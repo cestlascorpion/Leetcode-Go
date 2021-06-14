@@ -9,12 +9,7 @@ func TestCreateTargetArray(t *testing.T) {
 	index := []int{0, 1, 2, 2, 1}
 	res := CreateTargetArray(nums, index)
 	exp := []int{0, 4, 1, 3, 2}
-	if len(res) != len(exp) {
+	if !IsSameArray(exp, res) {
 		t.Fail()
-	}
-	for i, v := range exp {
-		if res[i] != v {
-			t.Fail()
-		}
 	}
 }
