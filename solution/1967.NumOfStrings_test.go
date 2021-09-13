@@ -9,6 +9,6 @@ func TestNumOfStrings(t *testing.T) {
 	word := "abdef"
 	exp := 2
 	if NumOfStrings(patterns, word) != exp {
-		t.Failed()
+		t.Fail()
 	}
 }

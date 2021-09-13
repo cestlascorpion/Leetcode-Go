@@ -1,7 +1,5 @@
 package solution
 
-import "fmt"
-
 func MakeFancyString(s string) string {
 	str := make([]byte, 0)
 	str = append(str, s[0])
@@ -19,6 +17,5 @@ func MakeFancyString(s string) string {
 			cnt = 1
 		}
 	}
-	fmt.Println(string(str))
 	return string(str)
 }

@@ -7,6 +7,6 @@ func TestGetLucky(t *testing.T) {
 	k := 2
 	exp := 6
 	if GetLucky(s, k) != exp {
-		t.Failed()
+		t.Fail()
 	}
 }
